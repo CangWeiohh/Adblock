@@ -67,8 +67,8 @@ if (obj instanceof Array) {
 body = JSON.stringify(body);
 body = body.replace(/id\":\"([0-9]{15,})str\"/g, 'id":$1');
 body = body.replace(/\"can_download\":false/g, '"can_download":true');
-body = body.replace(/tplv-ppx-logo.image/g, '0x0.gif');
-body = body.replace(/tplv-ppx-logo/g, '0x0');
+body = body.replace(/tplv-ppx-logo.image/g, '\-1x\-1.gif');
+body = body.replace(/tplv-ppx-logo/g, '\-1x\-1');
 $done({
     body
 });
